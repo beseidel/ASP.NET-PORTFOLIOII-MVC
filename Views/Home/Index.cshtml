@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="~/css/style.css"/>
+        <link rel="stylesheet" href="~/images/dog.jpg"/>
+        <link rel="stylesheet" href="~/javascript/java.js"/>
+
+
+        <title>Hello!</title>
+    </head>
+    <body>
+
+        <h3>
+        <a href ="/">Index</a>
+        <a href ="/projects">Projects</a>
+        <a href ="/contact">Contact</a>
+        <a href ="/razorfun">Razorfun</a>
+        <a href ="/showtime">Time</a>
+        <a href ="/form">Form</a>
+        </h3>
+
+        <h1>Hello ASP.NET Mvc!</h1>
+
+      
+
+<h1> Welcome to my Portfolio Index Page!
+
+    <p>Barbara Seidel Hello from Views</p>
+    
+    @{
+    var StringList = new List<string>
+    {
+        "one",
+        "two",
+        "three",
+        "four"
+    };
+        
+    foreach(var word in StringList)
+    {
+        <div>
+            <p>@word</p>
+            @if(word.Length < 4)
+            {
+                 <p>@word is a short word</p>
+            }
+       </div>
+    }
+}
+
+@{
+    var StringList2 = new List<string>
+    {
+        "five",
+        "six",
+        "seven",
+        "eight"
+     };
+        
+    foreach(var word in StringList2)
+    {
+        // We can render HTML from within C# code!
+        <p>@word</p>
+    }
+}
+
+
+
+
+</body>
+
+</html>
+
